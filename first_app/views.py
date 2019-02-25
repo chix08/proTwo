@@ -12,5 +12,5 @@ def test_template(request):
 
 def user_data(request):
     print(RealUser.objects.all())
-    d = {}
+    d = {"md": RealUser.objects.all()}
     return render(request, "data.html", d)
